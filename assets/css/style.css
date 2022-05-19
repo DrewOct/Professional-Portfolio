@@ -2,6 +2,7 @@
     --primary-color: #514f97;
     --secondary-color: #1e88f7;
     --tertiary-color: #fe9a01;
+    --quarternary-color: #f1e7f7;
 }
 body {
     color: var(--secondary-color);
@@ -10,6 +11,7 @@ body {
 
 /* HEADER / NAV BAR STYLES START */
 header {
+    padding: 15px 40px;
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
@@ -23,9 +25,99 @@ header h2 {
     margin: 0;
     font-size: 32px;
     color: var(--tertiary-color);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 header a {
     text-decoration: none;
     color: var(--tertiary-color);
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 10px;
+    text-shadow: none;
+}
+/* HEADER / NAV BAR STYLES END */
+
+/* FOOTER STYLES START */
+footer {
+    background: var(--primary-color);
+    padding: 35px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer h4 {
+    color: var(--secondary-color);
+    font-size: 35px;
+    margin: 0;
+}
+
+footer div {
+    line-height: 2;
+    text-align: center;
+}
+/* About Me section */
+.about-me {
+    line-height: 2;
+    color: var(--primary-color);
+    width: 100%;
+    margin: 5 auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+.about-me div {
+    background: var(--secondary-color)
+}
+
+.about-me h2 {
+    padding: 10px 25px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.about-me div {
+    color: var(--tertiary-color);
+    background: var(--quaternary-color);
+    display: flex;
+    justify-content: center;
+    flex-wrap: flex;
+    align-items: flex-start;
+}
+
+.about-me p {
+    padding: 10px 25px;
+    font-weight: normal;
+    text-align: left;
+
+}
+
+/* Skills & Education section */
+.skills col-sm {
+    background: var(--primary-color);
+}
+
+.skills col-sm h4 {
+
 }
