@@ -2,7 +2,8 @@
     --primary-color: #514f97;
     --secondary-color: #1e88f7;
     --tertiary-color: #fe9a01;
-    --quarternary-color: #f1e7f7;
+    --quaternary-color: #f1e7f7;
+    --quinary-color: #08a99c;
 }
 body {
     color: var(--secondary-color);
@@ -67,7 +68,7 @@ footer {
 }
 
 footer h4 {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
     font-size: 35px;
     margin: 0;
 }
@@ -76,6 +77,8 @@ footer div {
     line-height: 2;
     text-align: center;
 }
+/* FOOTER STYLES END */
+
 /* About Me section */
 .about-me {
     line-height: 2;
@@ -86,11 +89,9 @@ footer div {
     text-align: center;
 }
 
-.about-me div {
-    background: var(--secondary-color)
-}
 
 .about-me h2 {
+    color: var(--secondary-color);
     padding: 10px 25px;
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -98,7 +99,7 @@ footer div {
 }
 
 .about-me div {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     background: var(--quaternary-color);
     display: flex;
     justify-content: center;
@@ -107,17 +108,98 @@ footer div {
 }
 
 .about-me p {
+    font-size: 15px;
     padding: 10px 25px;
     font-weight: normal;
     text-align: left;
+}
 
+.about-me ul li {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: left;
+    flex-wrap: flex;
+    align-items: flex-start;
+    padding: 10px 25px;
+}
+
+.about-me ul li a {
+    color: var(--tertiary-color);
+}
+
+.bio-links {
+    column-count: 2;
+    column-gap: 40px;
+    flex-wrap: wrap;
 }
 
 /* Skills & Education section */
-.skills col-sm {
-    background: var(--primary-color);
+.skills {
+    background: var(--quinary-color);
+    padding: 15px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
 }
 
-.skills col-sm h4 {
+.flex-container-skills {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.flex-child-skills {
+    background-color: var(--tertiary-color);
+    border: 10px solid var(--primary-color);
+    padding: 10px;
+    margin: 5px;
+}
+
+.flex-child-skills ul {
+    list-style: none;
+}
+
+.flex-container-edu {
+    display: flex;
+    flex-wrap: flex;
+}
+
+
+.flex-child-edu {
+    background-color: var(--tertiary-color);
+    border: 10px solid var(--primary-color);
+    padding: 10px;
+    margin: 5px;
+}
+
+.border-title {
+    color: var(--primary-color);
+}
+
+.skill-group {
+    color: var(--secondary-color)
+}
+
+.skill-group li {
+    color: var(--quaternary-color);
+}
+
+.col-sm-9 {
+    background-color: var(--tertiary-color);
+    border: 50px var(--primary-color);
+    padding: 20px;
+    margin: 20px;
+}
+
+.col-sm-9 h3 {
+    color: var(--secondary-color);
+}
+
+.col-sm-9 p {
+    color: var(--quaternary-color);
+    text-indent: 50px;
+}
+.year-box {
+    color: var(--quaternary-color);
+    text-align: right;
 }
