@@ -2,20 +2,23 @@
     --primary-color: #514f97;
     --secondary-color: #1e88f7;
     --tertiary-color: #fe9a01;
+    --tertiary-color-alpha: rgba(254, 154, 1, .5);
     --quaternary-color: #f1e7f7;
     --quinary-color: #08a99c;
 }
 body {
     color: var(--secondary-color);
     font-family: Arial, Helvetica, sans-serif;
+    margin-left: 0px;
+    margin-right: 0px
 }
 
 /* HEADER / NAV BAR STYLES START */
 header {
     padding: 15px 40px;
     background-color: var(--primary-color);
+    /* justify-content: space-between; */
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
@@ -29,24 +32,43 @@ header h2 {
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-header a {
-    text-decoration: none;
-    color: var(--tertiary-color);
-}
-
 header nav ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     list-style: none;
 }
 
+header nav {
+    text-align:center;
+}
+
 header nav ul li a {
+    text-decoration: none;
+    color: var(--tertiary-color);
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.5vw;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* large */
+@media screen and (min-width: 850px) {
+    header nav ul li a {
+        font-size: 25px;
+    }
+}
+/* medium */
+@media screen and (min-width: 600px) and (max-width:849px) {
+    header nav ul li a {
+        font-size: 20px;
+    }
+}
+/* small */
+@media screen and (max-width: 599px){
+    header nav ul li a {
+        font-size: 5px;
+    }
 }
 
 header nav ul li a:hover {
@@ -57,32 +79,11 @@ header nav ul li a:hover {
 }
 /* HEADER / NAV BAR STYLES END */
 
-/* FOOTER STYLES START */
-footer {
-    background: var(--primary-color);
-    padding: 35px 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-footer h4 {
-    color: var(--tertiary-color);
-    font-size: 35px;
-    margin: 0;
-}
-
-footer div {
-    line-height: 2;
-    text-align: center;
-}
-/* FOOTER STYLES END */
 
 /* About Me section */
 .about-me {
+    background-color: var(--quaternary-color);
     line-height: 2;
-    color: var(--primary-color);
     width: 100%;
     margin: 5 auto;
     font-size: 20px;
@@ -94,8 +95,8 @@ footer div {
     color: var(--secondary-color);
     padding: 10px 25px;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     text-align: left;
+    width: 50%;
 }
 
 .about-me div {
@@ -107,11 +108,12 @@ footer div {
     align-items: flex-start;
 }
 
-.about-me p {
+.biblio {
     font-size: 15px;
     padding: 10px 25px;
     font-weight: normal;
     text-align: left;
+    width: 50%;
 }
 
 .about-me ul li {
@@ -127,20 +129,38 @@ footer div {
     color: var(--tertiary-color);
 }
 
-.bio-links {
-    column-count: 2;
-    column-gap: 40px;
+.container {
+    display: flex;
     flex-wrap: wrap;
 }
 
-/* Skills & Education section */
-.skills {
-    background: var(--quinary-color);
-    padding: 15px 40px;
+/* .bio-links {
+    column-count: 2;
+    column-gap: 50px;
     display: flex;
     flex-wrap: wrap;
-    position: sticky;
+    align-items: left
+} */
+
+/* .bio-links-column {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* Skills & Education section */
+.skills-education {
+    background: var(--quinary-color);
+    padding: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    /* position: sticky; */
     top: 0;
+}
+
+.border-title {
+    color: var(--primary-color);
+    align-items: center;
+    font-size: 25px
 }
 
 .flex-container-skills {
@@ -153,53 +173,140 @@ footer div {
     border: 10px solid var(--primary-color);
     padding: 10px;
     margin: 5px;
+    width: 150px;
+    text-align: center;
 }
 
 .flex-child-skills ul {
+    padding:0px;
     list-style: none;
+    list-style-position: inside;
+}
+
+.flex-child-skills ul li {
+    color: var(--quaternary-color);
+}
+
+.spacer {
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .flex-container-edu {
     display: flex;
-    flex-wrap: flex;
+    flex-wrap: wrap;
 }
-
 
 .flex-child-edu {
     background-color: var(--tertiary-color);
     border: 10px solid var(--primary-color);
-    padding: 10px;
     margin: 5px;
+    width: 250px;
+    text-align:center;
 }
 
-.border-title {
-    color: var(--primary-color);
-}
-
-.skill-group {
-    color: var(--secondary-color)
-}
-
-.skill-group li {
+.school h4 {
     color: var(--quaternary-color);
 }
 
-.col-sm-9 {
+.school {
     background-color: var(--tertiary-color);
     border: 50px var(--primary-color);
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
 }
 
-.col-sm-9 h3 {
+.school h3 {
     color: var(--secondary-color);
 }
 
-.col-sm-9 p {
+.school p {
     color: var(--quaternary-color);
     text-indent: 50px;
 }
-.year-box {
-    color: var(--quaternary-color);
-    text-align: right;
+/* PROJECT SHOWCASE STYLES START */
+.flex-container-showcase {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.project-showcase {
+    background: var(--quaternary-color);
+    padding: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+}
+
+.project-showcase h2 {
+    color: var(--quinary-color);
+    font-size: 25px;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 20px
+}
+
+.project-showcase-title {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    background-color: var(--tertiary-color-alpha);
+}
+
+.flex-child-showcase {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 250px;
+    display: block;
+    position:relative;
+    background-color: var(--secondary-color);
+}
+
+.flex-child-showcase:hover {
+    width: 375px;
+    height: 275px;
+}
+
+.flex-child-showcase-run-buddy {
+    background-image: url("../../assets/images/Run-Buddy-Image.png");
+}
+
+.flex-child-showcase-code-refactor {
+    background-image: url("../../assets/images/Code-Refactor-Image 2.png");
+}
+
+/* FOOTER STYLES START */
+footer {
+    background: var(--primary-color);
+    padding: 15px 40px;
+    /* width: 100%; */
+}
+
+footer h2 {
+    color: var(--tertiary-color);
+    font-size: 25px;
+    margin: 0;
+    text-align: left;
+    /* background-color: green; */
+}
+
+footer div {
+    line-height: 2;
+    text-align: center;
+    /* background: red; */
+}
+
+.contact ul li {
+    text-align: left;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* FOOTER STYLES END */
